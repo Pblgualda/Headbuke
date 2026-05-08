@@ -1,0 +1,61 @@
+@use "../abstract/" as core;
+
+.novedades
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+
+    h2{
+        text-align: center;
+        margin-bottom: 2rem;
+        font-size: core.font-size(xxl);
+        color: core.color(primary);
+    }
+
+    .news-card
+    {
+        border-radius: 10px;
+        width: 75%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 0.6fr 0.4fr;
+        justify-content: center;
+        align-items: center;
+        background-color: core.color(white);
+        padding: 1rem;
+    }
+}
+
+.news-image
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 90%;
+    width: 90%;
+    img
+    {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+}
+.novedades .news-info
+{
+    display: flex;
+    flex-direction: column;
+    padding: 0.2rem;
+    font-size: core.font-size(m);
+    text-align: left;
+
+    ul{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+}

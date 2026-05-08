@@ -1,0 +1,21 @@
+@use "../abstract/mixin" as core;
+
+.first-nav{
+    grid-column: 6/9;
+    padding: 10px 0;
+    @include core.center;
+    @include core.nav-links;
+}
+.first-nav-list{
+    @include core.navmenu;
+}
+
+.second-nav{
+    grid-row: 3/4;
+    grid-column: 3/7;
+    @include core.center;
+    @include core.nav-links;
+}
+.second-nav-list{
+    @include core.navmenu;
+}

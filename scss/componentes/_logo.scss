@@ -1,0 +1,9 @@
+@use "../abstract/mixin" as core;
+.logo{
+    grid-column: 1/2;
+    @include core.center;
+    padding: 3px 0;
+}
+.logo-img{
+    width: 50%;
+}

@@ -1,0 +1,66 @@
+//// Proyecto: SaSS Moderno
+/// @author Headbuke
+@use "sass:map";
+
+
+///paleta de colores
+/// @group Colores
+/// @type Map
+$colors: (
+    primary: #2f2fff,
+    secondary: #ffffff,
+    tertiary: #000000,
+    quaternary: #2c2696,
+    accent: #f7ff12,
+    background: #85e8f9,
+    text: #000000,
+    light: #7b7b7b,
+    white: #ffffff,
+    gray: #ababab,
+);
+
+
+
+///obtiene un color del mapa de colores
+/// @group Colores
+/// @param {String} $name - El nombre del color a obtener
+/// @return {Color} Valor 
+@function colors($name) {
+    @if map.has-key($colors, $name) {
+        @return map.get($colors, $name);
+    } @else {
+        @warn "Color '#{$name}' no encontrado en la paleta de colores.";
+        @return null;
+    }
+    @return map.get($colors, $name);
+}
+
+///Tamaño de fuentes
+/// @group Texto
+/// @type Map
+$font-sizes: (
+    xs: 1.6rem,
+    s: 1.8rem,
+    m: 2rem,
+    l: 2.5rem,
+    xl: 3rem,
+    xxl: 6rem
+);
+
+///tamaños de pantalla
+/// @group Media
+/// @type Map
+$sizes:(
+    small:576px,
+    medium:768px,
+    large:992px,
+    xlarge:1200px,
+    xxlarge:1400px
+);
+
+@function color($name) {
+    @return map.get($colors, $name);
+}
+@function font-size($size) {
+    @return map.get($font-sizes, $size);
+}

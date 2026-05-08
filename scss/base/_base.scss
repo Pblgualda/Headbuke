@@ -1,0 +1,92 @@
+@use "../abstract" as core;
+@import url('https://fonts.googleapis.com/css2?family=Tiny5&display=swap');
+
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Tiny5", sans-serif;
+    background-color: core.color(background);
+    color: core.color(text);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+// ===== HEADINGS =====
+h1 {
+    font-size: core.font-size(xxl);
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    color: core.color(light);
+}
+
+h2 {
+    font-size: core.font-size(xl);
+    font-weight: bold;
+    margin-bottom: 1.2rem;
+    color: core.color(light);
+}
+
+h3 {
+    font-size: core.font-size(l);
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: core.color(primary);
+}
+
+h4, h5, h6 {
+    font-size: core.font-size(m);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 0.4rem;
+    
+    &:hover {
+        opacity: 0.9;
+        transition: opacity 0.3s ease;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: core.color(secondary);
+    font-weight: 500;
+    transition: all 0.3s ease;
+    
+    &:hover {
+        color: core.color(accent);
+        text-decoration: underline;
+    }
+    
+    &:active {
+        opacity: 0.8;
+    }
+}
+
+
+.destacado {
+    background-color: core.color(tertiary);
+    border: 2px solid core.color(accent);
+    box-shadow: 0 0 15px rgba(255, 136, 196, 0.4);
+    transform: scale(1.02);
+    transition: all 0.3s ease;
+    
+&:hover {
+    box-shadow: 0 0 25px rgba(255, 136, 196, 0.6);
+    transform: scale(1.05);
+}
+
+}

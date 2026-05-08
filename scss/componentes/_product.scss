@@ -1,0 +1,52 @@
+@use "sass:math";
+@use "../abstract" as core;
+
+$line-height: 1.4;
+$lines-to-show: 2;
+
+.product-card{
+    background-color: core.color(secondary);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 4px 6px core.color(primary);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    &__media{
+        background-color: core.color(primary);
+        padding: 2rem;
+        padding-top: 2rem;
+        display:flex;
+        justify-content: center;
+
+        img{
+            width:30rem;
+            height: 10rem;
+            object-fit:contain;
+        }
+    }
+
+    &__content{
+        padding: 1rem 0.8rem;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        color: core.color(text);
+    }
+
+    &__title{
+        color: core.color(primary);
+        font-size: core.font-size(m);
+        margin-bottom: 0.5rem;
+    }
+
+    &__text{
+        text-align: left;
+        font-size: core.font-size(xs);
+        line-height: 1.4;
+        color: core.color(text);
+        flex-grow: 1;
+        overflow: hidden;
+    }
+}
