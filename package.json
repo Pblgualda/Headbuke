@@ -2,12 +2,26 @@
   "name": "actividad2",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "source": "src/index.html",
   "scripts": {
+    "start": "parcel",
+    "build": "parcel build --public-url ./",
     "watch": "sass -w scss/style.scss css/styles.css"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs"
+  "type": "commonjs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pblgualda/Headbuke.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Pblgualda/Headbuke/issues"
+  },
+  "homepage": "https://github.com/Pblgualda/Headbuke#readme",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.16.4",
+    "parcel": "^2.16.4"
+  }
 }
